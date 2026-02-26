@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pudim</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main class="recipe-page">
+        <header class="hero">
+            <figure class="hero-figure">
+                <img src="pudim.png" alt="Pudim" class="hero-img">
+            </figure>
+            <div class="hero-text">
+                <h1>Receita de Pudim</h1>
+                <p class="tagline">Doce, cremoso e clássico — fácil de preparar em casa.</p>
+            </div>
+        </header>
+
+        <section class="card game-card">
+            <h2>Jogo do Pudim</h2>
+            <p class="muted">Controle o pudim: pressione Espaço / ↑ para pular. Evite os obstáculos e marque pontos!</p>
+            <div class="game-area">
+                <canvas id="gameCanvas" width="900" height="200" aria-label="Jogo do Pudim"></canvas>
+                <div class="hud">
+                    <div id="score" class="score">0</div>
+                    <div class="controls">
+                        <button id="startBtn" class="btn primary">Iniciar</button>
+                        <button id="restartBtn" class="btn" style="display:none;">Reiniciar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Ingredientes</h2>
+            <ul class="ingredients">
+                <li><strong>1</strong> lata de leite condensado</li>
+                <li><strong>2</strong> medidas da lata de leite</li>
+                <li><strong>3</strong> ovos</li>
+                <li><strong>1 xícara</strong> de açúcar (para a calda)</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Modo de Preparo</h2>
+            <ol class="steps">
+                <li>Preaqueça o forno a <strong>180°C</strong>.</li>
+                <li>Em uma panela, derreta o açúcar até formar uma calda dourada.</li>
+                <li>Despeje a calda em uma forma de pudim.</li>
+                <li>No liquidificador, bata o leite condensado, o leite e os ovos.</li>
+                <li>Despeje a mistura na forma caramelizada.</li>
+                <li>Cubra com papel alumínio e asse em banho-maria por cerca de <strong>1 hora</strong>.</li>
+                <li>Deixe esfriar e desenforme.</li>
+            </ol>
+        </section>
+
+        <section class="card quiz-card">
+            <h2>Quiz: O quanto você sabe sobre Pudim?</h2>
+            <p class="muted">Responda as perguntas abaixo e veja sua pontuação.</p>
+            <div id="quiz" class="quiz" aria-live="polite">
+                <!-- O quiz será renderizado aqui por quiz.js -->
+            </div>
+            <div class="quiz-actions">
+                <button id="submitQuiz" class="btn primary">Verificar respostas</button>
+                <button id="retryQuiz" class="btn" style="display:none;">Tentar novamente</button>
+            </div>
+            <div id="quizResult" class="quiz-result" role="status" aria-atomic="true"></div>
+        </section>
+    </main>
+
+    <script src="dino-pudim.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>
