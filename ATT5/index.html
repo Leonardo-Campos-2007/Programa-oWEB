@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Calcladora de abastecimento</h1>
+    <hr>
+    <p>Escolha o tipo de combustivel e quantidade de litros </p>
+    <p>Tabela de preços</p>
+
+    <ul>
+        <li>Gasolina: 6.00</li>
+        <li>Etanol: 4.30</li>
+        <li>Disel: 5.00</li>
+    </ul>
+
+    <form id = "abastecer">
+        <label for = "combustivelabastecer"> Tipo Combustivel </label>
+        <select name="combustivel" id="combustivel">
+            <option value="">Escolha um Opção</option>
+            <option value="gasolina">Gasolina</option>
+            <option value="etanol">Etanol</option>
+            <option value="diesel">Diesel</option>
+        </select>
+        <label for="litros">Quantidade (litros)</label>
+        <input type="number" min = "0" step="0.1" id = "litros">
+    </form>
+
+    <h2>Resultado</h2>
+    <p id = "resultado"></p>
+    
+</body>
+</html>
