@@ -30,7 +30,7 @@ async function carregarFeedbacks(){
 async function removerFeedback(index) {
     if (confirm('Tem certeza que deseja remover este feedback?')) {
         const resposta = await fetch(`/api/feedbacks/${index}`, {
-            method: 'DELETE'
+            method: 'POST'
         })
         if (resposta.ok) {
             carregarFeedbacks()

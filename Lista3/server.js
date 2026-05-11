@@ -24,7 +24,7 @@ app.get('/api/feedbacks', (req, res) => {
     res.json(feedbacks)
 })
 
-app.delete('/api/feedbacks/:index', (req, res) => {
+app.post('/api/feedbacks/:index', (req, res) => {
     const index = req.params.index
     feedbacks.splice(index, 1)
     res.sendStatus(200)
