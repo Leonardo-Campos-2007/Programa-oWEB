@@ -1,0 +1,60 @@
+body {
+    font-family: sans-serif;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 0 20px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: blue;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+input:focus {
+    outline: none;
+    border-color: blue;
+}
+
+button {
+    padding: 10px 28px;
+    background: blue;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0000cc;
+}
+
+.botao-feedback {
+    display: inline-block;
+    padding: 10px 28px;
+    background: blue;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.botao-feedback:hover {
+    background: #0000cc;
+}
