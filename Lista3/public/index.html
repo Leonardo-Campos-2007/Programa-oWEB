@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 0 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: blue;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: blue;
+        }
+
+        button {
+            padding: 10px 28px;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0000cc;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sua opnião importa</h1>
+
+    <hr>
+
+    <form action="/contato" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="feedback">Feedback:</label>
+        <input type="text" id="feedback" name="feedback" required style="padding: 60px 14px;">
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
