@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,6 +54,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <h1>Sua opnião importa</h1>
@@ -66,10 +68,23 @@
         <label for="feedback">Feedback:</label>
         <input type="text" id="feedback" name="feedback" required style="padding: 60px 14px;">
 
-        <button type="submit">Enviar</button>
+        <button type="submit" id="enviar">Enviar</button>
+
+        <button id="botao" href="/feedbacks"
+            style="text-decoration: none; color: rgb(255, 255, 255); text-align: center;">Ver feedbacks</button>
+
     </form>
 
-    <script src="script.js"></script>
+    <script src="script.js">
+
+        let botao = document.getElementById('enviar');
+        botao.addEventListener('click', function () {
+            alert('Botão clicado!');
+        });
+
+
+    </script>
 
 </body>
+
 </html>
