@@ -6,7 +6,9 @@ async function carregarFeedbacks(){
 
     const lista = document.getElementById('lista-feedbacks')
 
-    feedbacks.forEach(item => {
+    lista.innerHTML = ''
+
+    feedbacks.forEach((item, index) => {
 
         lista.innerHTML += `
         
@@ -16,11 +18,24 @@ async function carregarFeedbacks(){
 
                 <p>${item.feedback}</p>
 
+                <button class="btn-remover" onclick="removerFeedback(${index})">Remover</button>
+
             </div>
         
         `
     })
 
+}
+
+async function removerFeedback(index) {
+    if (confirm('Tem certeza que deseja remover este feedback?')) {
+        const resposta = await fetch(`/api/feedbacks/${index}`, {
+            method: 'DELETE'
+        })
+        if (resposta.ok) {
+            carregarFeedbacks()
+        }
+    }
 }
 
 carregarFeedbacks()

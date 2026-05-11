@@ -15,4 +15,19 @@ h1{
     color: blue;
 }
 
+.btn-remover {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.btn-remover:hover {
+    background-color: darkred;
+}
+
 
