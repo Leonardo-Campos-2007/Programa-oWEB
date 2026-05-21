@@ -1,16 +1,17 @@
 const mysql = require('mysql2');
-const connection = mysql.createConnection({
+const db = mysql.createConnection({
   host: 'localhost',
-  user: 'dbuser',
-  password: 's3kreee7',
-  database: 'my_db',
+  user: 'root',
+  password: 'catolica',
+  database: 'userdb_leonardo',
+  port: '3307'
 });
 
-connection.connect();
-
-connection.query('SELECT 1 + 1 AS solution', (err, rows, fields) => {
-  if (err) throw err;
-
-  console.log('The solution is: ', rows[0].solution);
+db.connect(err => {
+    if(err) throw err;
+    console.log('Connected to the database!');
 });
 
+
+                                            
+module.exports = db;
